@@ -84,7 +84,7 @@ modprobe br_netfilter
 sysctl -p /etc/sysctl.conf
 ```
 
-### Step 7: Modify containerd Configuration for systemd Support
+### Step 7: Modify containerd Configuration for systemd Support do it in every node one by one
 ```bash
 sudo nano /etc/containerd/config.toml
 ```
@@ -308,12 +308,12 @@ version = 2
   uid = 0
 ```
 
-### Step 8: Restart containerd and Check the Status
+### Step 8: Restart containerd and Check the Status , do for all 3 instance
 ```bash
 sudo systemctl restart containerd && systemctl status containerd
 ```
 
-### Step 9: Install kubeadm, kubelet, and kubectl
+### Step 9: Install kubeadm, kubelet, and kubectl , do for all 3 instance 
 ```bash
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl gpg
@@ -327,7 +327,7 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-### Step 10: Initialize the Cluster and Install CNI
+### Step 10: Initialize the Cluster and Install CNI , do only in master , copy the join  command but dont paste in worker now
 ```bash
 sudo kubeadm config images pull
 sudo kubeadm init
