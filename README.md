@@ -84,7 +84,7 @@ sysctl -p /etc/sysctl.conf
 ```bash
 sudo nano /etc/containerd/config.toml
 ```
-#### Paste the configuration in the file and save it.
+####  Delete the content in that file and Paste this configuration in the file and save it.
 ```bash
 disabled_plugins = []
 imports = []
