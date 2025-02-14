@@ -328,7 +328,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 sudo kubeadm config images pull
 sudo kubeadm init
 ```
-#### After Initialzing the Cluster Connect to it and apply the CNI yaml (We're using Weave CNI in this guide)
+#### After Initialzing the Cluster Connect to it and apply the CNI yaml (We're using Weave CNI in this guide) , execute this only in master
 
 ```bash
 #To start using your cluster, you need to run the following as a regular user:
